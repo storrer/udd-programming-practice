@@ -1,13 +1,4 @@
-# Programming practice problems
-Please save each solution in its own file, in a practice problems folder.
-
-# Wordplay
-
-A file containing all valid Scrabble words, one word per line:
-
-https://www.dropbox.com/s/qkg62nkh483g635/sowpods.txt?dl=0
-
-
+# Problem list:
 **For loops and if conditions**
 
 [ ] What are all of the words containing UU?
@@ -31,4 +22,24 @@ https://www.dropbox.com/s/qkg62nkh483g635/sowpods.txt?dl=0
 [ ] What is the longest palindrome?
 [ ] What are all of the letters that never appear consecutively in an English word? For example, we know that “U” isn’t an answer, because of the word VACUUM, and we know that “A” isn’t an answer, because of “AARDVARK”, but which letters never appear consecutively?
 
+# Solutions found in these files:
 
+## For loops and if conditions
+
+01-words-containing-uu.py
+02-words-containing-xyz.py
+03-words-containing-q-but-not-u.py
+04-words-containing-cat-and-5-letters.py
+05-words-with-no-e-or-a-and-15-letters.py
+06-words-with-b-and-x-and-less-than-5-letters.py
+07-words-starting-and-ending-with-y.py
+08-words-with-no-vowel-and-not-even-y.py
+09-words-with-all-5-vowels.py
+10-words-with-all-5-vowels-in-alphabetical-order.py
+11-count-words-containing-type.py
+12-create-array-of-words-ending-in-ghtly.py
+13-shortest-word-with-all-5-vowels.py
+14-longest-word-with-no-vowels.py
+15-least-common-letter-among-qxz.py
+16-longest-palindrome.py
+17-letters-that-never-appear-consecutively.py
