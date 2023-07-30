@@ -2,7 +2,7 @@
 input_filename = "sowpods.txt"
 
 # Using a function I wrote for problem 09:
-def find_words_with_each_vowels(filename):
+def find_words_with_each_vowel(filename):
     words_with_each_vowel = []
     vowels = "AEIOU"
 
@@ -41,7 +41,7 @@ def find_shortest_words(words_list):
     return shortest_words
 
 
-words_to_compare = find_words_with_each_vowels(input_filename)
+words_to_compare = find_words_with_each_vowel(input_filename)
 shortest_words = find_shortest_words(words_to_compare)
 
 print("The shortest word(s) with all five vowels: ", shortest_words)

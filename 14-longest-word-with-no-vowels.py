@@ -1,10 +1,10 @@
 # What is the longest word that contains no vowels?
 input_filename = "sowpods.txt"
 
-
+# From problem 08
 def find_words_without_vowels(filename):
-    words_without_vowels_even_Y = []
-    vowels = "AEIOUY"
+    words_without_vowels = []
+    vowels = "AEIOU"
     with open(filename, 'r') as file:
         words = file.readlines()
     for word in words:
@@ -12,9 +12,8 @@ def find_words_without_vowels(filename):
             if vowel in word:
                 break
         else:
-            words_without_vowels_even_Y.append(word.strip())
+            words_without_vowels.append(word.strip())
     
-    return words_without_vowels_even_Y
+    return words_without_vowels
 
-for word in find_words_without_vowels(input_filename):
-    print(word)
+vowel_free_words = find_words_without_vowels(input_filename)

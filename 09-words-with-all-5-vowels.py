@@ -1,7 +1,7 @@
 # What are all of the words that have all 5 vowels, in any order?
 input_filename = "sowpods.txt"
 
-def find_words_with_each_vowels(filename):
+def find_words_with_each_vowel(filename):
     words_with_each_vowel = []
     vowels = "AEIOU"
 
@@ -21,5 +21,5 @@ def find_words_with_each_vowels(filename):
     
     return words_with_each_vowel
 
-for word in find_words_with_each_vowels(input_filename):
+for word in find_words_with_each_vowel(input_filename):
     print(word)

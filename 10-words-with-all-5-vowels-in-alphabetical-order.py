@@ -14,7 +14,7 @@ def has_vowels_in_order(word):
     return True
 
 # Starting with the function I wrote for problem 09
-def find_words_with_each_vowels(filename):
+def find_words_with_each_vowel(filename):
     words_with_each_vowel = []
     vowels = "AEIOU"
 
@@ -45,7 +45,7 @@ def find_words_with_each_vowel_in_order(word_list):
     return words_with_each_vowel_in_order
 
 input_filename = "sowpods.txt"
-words_list = find_words_with_each_vowels(input_filename)
+words_list = find_words_with_each_vowel(input_filename)
 result = find_words_with_each_vowel_in_order(words_list)
 print("Words with each vowel in alphabetical order are:")
 
