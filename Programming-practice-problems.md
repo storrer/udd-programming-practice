@@ -1,6 +1,3 @@
-# Problem list:
-**For loops and if conditions**
-
 What are all of the words containing UU?
 What are all of the words containing an X and a Y and a Z?
 What are all of the words containing a Q but not a U?
@@ -11,9 +8,6 @@ What are all of the words that both start and end with a Y?
 What are all of the words with no vowel and not even a Y?
 What are all of the words that have all 5 vowels, in any order?
 What are all of the words that have all 5 vowels, in alphabetical order?
-
-**Setting up storage to use during a for loop, including counters and arrays**
-
 How many words contain the substring "TYPE”?
 Create and print an array containing all of the words that end in "GHTLY"
 What is the shortest word that contains all 5 vowels?
