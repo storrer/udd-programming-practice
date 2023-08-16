@@ -18,7 +18,7 @@ def find_words_with_each_vowel(filename):
                 break
         
         if contains_each_vowel:
-            words_with_each_vowel.append(word.strip())
+            words_with_each_vowel.append(word.rstrip())
     
     return words_with_each_vowel
 
