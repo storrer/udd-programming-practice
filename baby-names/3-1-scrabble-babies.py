@@ -6,3 +6,11 @@ and then with a dictionary (or set) to hold the Scrabble words. Use timer
 functions to measure how long it takes to complete this work under each 
 implementation. Why is the time different?
 """
+
+# Open scrabble words
+with open('C:/Projects/udd-programming-practice/wordplay/sowpods.txt', 'r') as file:
+    words = [word.rstrip() for word in file.readlines()]
+
+
+# Open baby names 2020
+#with open('baby_names_2020_short.txt', 'r') as file:

@@ -1,0 +1,1 @@
+Measure-Command {start-process python -argumentlist ./your-program.py -wait}
