@@ -1,5 +1,6 @@
 # Get the current directory
-$currentDirectory = Get-Location
+ $currentDirectory = Get-Location
+#$currentDirectory = "E:\Projects\udd-programming-practice\countries"
 
 # Get all .py files in the current directory
 $pyFiles = Get-ChildItem -Path $currentDirectory -Filter "*.py"
