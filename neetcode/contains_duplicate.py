@@ -26,8 +26,8 @@ def contains_duplicate(numbers):
     """ 
     seen_nums = set()
     for num in numbers:
-        if num in seen_nums:
-            return True
+        if num in seen_nums: 
+            return True # duplicate found
         seen_nums.add(num)
     return False
 
