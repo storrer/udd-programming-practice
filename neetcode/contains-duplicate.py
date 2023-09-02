@@ -20,13 +20,16 @@ def contains_duplicate(numbers):
     return False
 """
 def contains_duplicate(numbers):
-    # use a set to keep track of seen numbers
+    """
+    Rather than pre-generate a set of all unique entries in numbers[], I am now
+            
+    """ 
     seen_nums = set()
     for num in numbers:
         if num in seen_nums:
             return True
-        else:
-            seen_nums.add(num)
+        seen_nums.add(num)
+    return False
 
 nums_one = [1,2,3,1] # should be True
 nums_two = [1,2,3,4] # False
