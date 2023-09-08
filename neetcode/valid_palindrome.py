@@ -30,5 +30,3 @@ print(is_palindrome(s_test_three))
 # "Premature optimization is the root of all evil"
 # Don't brood -- speak.
 # Practice like this next week.
-import os
-os.g
