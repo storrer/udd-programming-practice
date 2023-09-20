@@ -22,7 +22,7 @@ from typing import List
 
 
 #TODO rewrite isAnagram
-def isAnagram(s: dict, t):
+def isAnagram(s, t):
     s_count = {}
     for letter in s:
         if letter in s_count:
