@@ -22,7 +22,7 @@ from typing import List
 
 
 #TODO rewrite isAnagram
-def isAnagram(s, t):
+def isAnagram(s: dict, t):
     s_count = {}
     for letter in s:
         if letter in s_count:
@@ -51,15 +51,14 @@ def groupAnagrams(strs: List[str]) -> List[List[str]]:
     while strs:
         # Remove the first string from the input array
         # Create an output anagram group
-        new_group = [strs.pop(0)] # O(n)
+        new_group = [strs.pop(0)] 
         # Take the first string, characterize it
         # Move through the rest of the array
         i = 0
         while i < len(strs):
-            if isAnagram(new_group[0], strs[i]): # n = number of strings, m = length | n*m 
-                # Remove matches, adding them to result group
-                new_group.append(strs[i]) 
-                strs.remove(strs[i]) # O(n)
+            if isAnagram(new_group[0], strs[i]):
+                new_group.append(strs[i])
+                strs.remove(strs[i])
             else:
                 i += 1
         anagram_groups.append(new_group)    
@@ -71,3 +70,4 @@ print(groupAnagrams(test1))
 
 #TODO get this down to O(n*m)
 #TODO work on this with mark D tomorrow
+
