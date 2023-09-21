@@ -39,14 +39,14 @@ target = 9
 
 # function that takes nums[] as input, and target
 def brute_two_sum(nums: list, target):
-    # compare each element + each following element to the target
-    for i in range(len(nums)): # 2
-        #TODO tidyup
-        current_el = nums[i] # 2
-        for j in range(i+1,len(nums)): # 3
-            if current_el + nums[j] == target: # true
-                # The first time we find a much, return the indices
-                return [i,j] # [2,3]
+	# compare each element + each following element to the target
+	for i in range(len(nums)): # 2
+		#TODO tidyup
+		current_el = nums[i] # 2
+		for j in range(i+1,len(nums)): # 3
+			if current_el + nums[j] == target: # true
+				# The first time we find a much, return the indices
+				return [i,j] # [2,3]
 
 # nums = nums
 # target = 9
@@ -58,46 +58,46 @@ sorted = [2,7,11,15]
 
 # Two Pointer solution
 def two_pointer_two_sum(nums: list, target):
-    # sort the list in place with built in method
-    # nums.sort() # O(nlog(n))
-    # Preprocessing not considered in the complexity UNLESS it
-    #TODO use a tuple to sort by element keeping indices 
-    # nums.sort(key=lambda x:x)
-    nums_list = list(enumerate(nums))
-    nums_list.sort(key=lambda x:x[1])
+	# sort the list in place with built in method
+	# nums.sort() # O(nlog(n))
+	# Preprocessing not considered in the complexity UNLESS it
+	#TODO use a tuple to sort by element keeping indices 
+	# nums.sort(key=lambda x:x)
+	nums_list = list(enumerate(nums))
+	nums_list.sort(key=lambda x:x[1])
 
-    # Compare the first and last elements
-    left = 0 # number 2
-    right = len(nums) - 1 # 15
+	# Compare the first and last elements
+	left = 0 # number 2
+	right = len(nums) - 1 # 15
 
-    while nums_list[left][1] + nums_list[right][1] != target:
-        if nums_list[left][1] + nums_list[right][1] > target:
-            right -= 1
-        elif nums_list[left][1] + nums_list[right][1] < target:
-            left += 1
-    
-    return [nums_list[left][0],nums_list[right][0]]
+	while nums_list[left][1] + nums_list[right][1] != target:
+		if nums_list[left][1] + nums_list[right][1] > target:
+			right -= 1
+		elif nums_list[left][1] + nums_list[right][1] < target:
+			left += 1
+	
+	return [nums_list[left][0],nums_list[right][0]]
 
 nums = [15,11,2,7]
 target = 9
 
 def set_two_sum(nums: list, target):
-    # Use a set
-    nums_set = set(nums)
-    # {2, 11, 7, 15}
-    for i in range(len(nums_set)):
-        if target - nums[i] in nums_set: # O(1)
-            return [nums[i], target - nums[i]]
-        
+	# Use a set
+	nums_set = set(nums)
+	# {2, 11, 7, 15}
+	for i in range(len(nums_set)):
+		if target - nums[i] in nums_set: # O(1)
+			return [nums[i], target - nums[i]]
+		
 def dict_two_sum(nums: list, target):
-    nums_dict = {}
-    for index, element in enumerate(nums):
-        nums_dict[element] = index
+	nums_dict = {}
+	for index, element in enumerate(nums):
+		nums_dict[element] = index
 
-    for i in range(len(nums)):
-        # ensure that target - nums[i] is not nums_dict[target - nums[i]]
-        if target - nums[i] in nums_dict and i != nums_dict[target - nums[i]]:
-            return [i, nums_dict[target-nums[i]]]
+	for i in range(len(nums)):
+		# ensure that target - nums[i] is not nums_dict[target - nums[i]]
+		if target - nums[i] in nums_dict and i != nums_dict[target - nums[i]]:
+			return [i, nums_dict[target-nums[i]]]
 
 
 #TODO Time vs Space tradeoffs

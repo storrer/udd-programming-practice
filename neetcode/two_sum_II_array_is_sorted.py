@@ -38,25 +38,25 @@ from typing import List
 
 
 class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]|None:
-        #1. brute force: iterate over the array for each element
-        #2. set(numbers) - if target - current_element in set(numbers) ! no index given
-        #3. Two pointer:
-        left = 0
-        right = len(numbers) - 1
-        
-        while numbers[left] + numbers[right] != target:
-            sum = numbers[left] + numbers[right]   
-            if sum > target:
-                right -= 1
-            elif sum < target:
-                left += 1
-            if left == right:
-                return None
-        
+	def twoSum(self, numbers: List[int], target: int) -> List[int]|None:
+		#1. brute force: iterate over the array for each element
+		#2. set(numbers) - if target - current_element in set(numbers) ! no index given
+		#3. Two pointer:
+		left = 0
+		right = len(numbers) - 1
+		
+		while numbers[left] + numbers[right] != target:
+			sum = numbers[left] + numbers[right]   
+			if sum > target:
+				right -= 1
+			elif sum < target:
+				left += 1
+			if left == right:
+				return None
+		
 
-        return [left+1, right+1]
-    
+		return [left+1, right+1]
+	
 
 
 # Tests

@@ -25,33 +25,33 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 
 
 class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
-        if not s:
-            return 0
-        
-        # Indexes delimiting substring
-        left = 0
-        
-        # Substring attribute
-        max_length = 1
+	def lengthOfLongestSubstring(self, s: str) -> int:
+		if not s:
+			return 0
+		
+		# Indexes delimiting substring
+		left = 0
+		
+		# Substring attribute
+		max_length = 1
 
-        # Loop over the string
-        for right in range(1, len(s)):
-            #TODO rewrite 42 with a hash lookup
-            #TODO maintain the set or dict
-            # If letter repeats, update right index
-            if s[right] in s[left:right]:
-                # Update starting index
-                left = s.index(s[right], left) + 1
-                continue
-            
-            current_length = right - left + 1
+		# Loop over the string
+		for right in range(1, len(s)):
+			#TODO rewrite 42 with a hash lookup
+			#TODO maintain the set or dict
+			# If letter repeats, update right index
+			if s[right] in s[left:right]:
+				# Update starting index
+				left = s.index(s[right], left) + 1
+				continue
+			
+			current_length = right - left + 1
 
-            if current_length > max_length:
-                max_length = current_length
+			if current_length > max_length:
+				max_length = current_length
 
-        return max_length
-    
+		return max_length
+	
 test1 = "abcabcbb" # 3
 test2 = "bbbbb" # 1 
 test3 = "pwwkew" # 3

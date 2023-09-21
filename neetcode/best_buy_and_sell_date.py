@@ -22,20 +22,20 @@ from typing import List
 
 
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        # Purchase price
-        purchase_price = prices[0]
-        profit = 0
+	def maxProfit(self, prices: List[int]) -> int:
+		# Purchase price
+		purchase_price = prices[0]
+		profit = 0
 
-        # For each element in prices
-        for price in prices:
-            # if difference is greater than profit, update profit
-            if price - purchase_price > profit:
-                profit = price - purchase_price
-            # if price is greater than purchase price, update purchase price
-            elif price < purchase_price:
-                purchase_price = price      
-        return profit
+		# For each element in prices
+		for price in prices:
+			# if difference is greater than profit, update profit
+			if price - purchase_price > profit:
+				profit = price - purchase_price
+			# if price is greater than purchase price, update purchase price
+			elif price < purchase_price:
+				purchase_price = price
+		return profit
 
 
 test1 = [7,1,5,3,6,4]

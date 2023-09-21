@@ -7,29 +7,30 @@ Output: true
 
 # Original implementation.
 """def contains_duplicate1(numbers):
-    nums_set = set(numbers) # (1,2,3) | (1,2,3,4) |(-1)
-    for num in nums_set: # O(n)
-        numbers.remove(num) # O(n) 
-    if not numbers: # Unique by default
-        return False
-    # This is where we need improvement 
-    for num in nums_set: # O(n)
-        if num in numbers: # O(n)
-            return True
-    return False"""
-
-def contains_duplicate1(numbers):
-    """
-    Rather than pre-generate a set of all unique entries in numbers[], I am now
-            
-    """
-    
-    seen_nums = set()
-    for num in numbers:
-        if num in seen_nums: 
-            return True # duplicate found
-        seen_nums.add(num)
-    return False
+	nums_set = set(numbers) # (1,2,3) | (1,2,3,4) |(-1)
+	for num in nums_set: # O(n)
+		numbers.remove(num) # O(n) 
+	if not numbers: # Unique by default
+		return False
+	# This is where we need improvement 
+	for num in nums_set: # O(n)
+		if num in numbers: # O(n)
+			return True
+	return False"""
+class Solution:
+	def containsDuplicate(self, num):
+		"""
+		Rather than pre-generate a set of all unique entries in numbers[], I am now
+		growing the variable seen_nums as the for loop passes over the a num.
+				
+		"""
+		
+		seen_nums = set()
+		for n in num:
+			if n in seen_nums: 
+				return True # duplicate found
+			seen_nums.add(n)
+		return False
 
 nums_one = [1,2,3,1] # should be True
 nums_two = [1,2,3,4] # False

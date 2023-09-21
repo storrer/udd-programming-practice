@@ -12,8 +12,8 @@ Explanation: "amanaplanacanalpanama" is a palindrome.
 
 
 def is_palindrome(s: str) -> bool:
-    # preprocess string here (don't be afraid to 'refactor')
-    return s.upper().replace(" ", "").replace(".","")[::-1] == s.upper().replace(" ","").replace(".","")
+	# preprocess string here (don't be afraid to 'refactor')
+	return s.upper().replace(" ", "").replace(".","")[::-1] == s.upper().replace(" ","").replace(".","")
 
 s_test = "abba"
 s_test_two = "abb a"
