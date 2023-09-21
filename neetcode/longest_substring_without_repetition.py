@@ -26,8 +26,8 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        # if input list is False
-            # return 0
+        if not s:
+            return 0
         
         # Indexes delimiting substring
         left = 0
