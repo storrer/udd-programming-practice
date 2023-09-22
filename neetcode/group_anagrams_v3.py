@@ -67,7 +67,7 @@ class Solution:
 
 		# Return the values of the dictionary as a list.
 		anagram_groups = []
-		for sorted_word_shape, strs in sorted_word_shapes.items():
+		for sorted_word_shape, strs in sorted_word_shapes.items(): # Construct the list, painstakingly
 			anagram_groups.append(strs)
 
 		return anagram_groups
