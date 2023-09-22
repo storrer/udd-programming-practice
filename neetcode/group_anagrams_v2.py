@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
 	word_shapes = {}
-
+	is_anagram_counter = 0
 	# O(n)
 	def isAnagram(self, s, t):
 		#print(f"s: {s} and t: {t}")
