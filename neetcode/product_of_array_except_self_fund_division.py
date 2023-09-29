@@ -45,6 +45,7 @@ from typing import List
 
 class Solution:
     def quotient(self, dividend: int, divisor: int) -> int:
+        
         # The quotient is found by counting iterations of loop below
         quotient = 0
         # Sum is used to control how many times we must add divisor
