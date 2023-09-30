@@ -60,14 +60,31 @@ class Solution:
         # Find the product of the elements in the list
         total = 1
         for integer in nums:
-            print(f"Current Integer: {integer}", '\n', f"Before Multiplication {total}\n")
+            print(f"Current operation: {integer} * {total}")
             total *= integer
-            print(f"After multiplication: {total}")
+            print(f"Result: {total}\n")
         
 
         return []
-    
-test_nums1 = [2,3,4]
-i = test_nums1[0]
-sol = Solution()
-sol.productExceptSelf(test_nums1)
+
+test_234 = ([2,3,4], [12,8,6])
+
+
+
+def runTests(test_inputs: List[tuple]):
+	sol = Solution()
+
+ 
+	test_passed = True
+	test_inputs = []
+	for input in test_inputs:
+		test_result = sol.productExceptSelf(input[0]) # Access elt 0 in tuple
+		if test_result != input[1]:                   # Compare actual to expected
+			print(f"Input: {input[0]}\nExpected: {input[1]}\nActual: {test_result}")
+			test_passed = False
+
+	
+	if test_passed:
+		print("All test passed.")
+
+runTests([])
