@@ -2,7 +2,9 @@
 Integer list, any duplicates return true.
 """
 from typing import List
+from clockdeco import clock
 class Solution:
+	@clock
 	def containsDuplicate(self, nums: List[int]) -> bool:
 		
 		if not nums:
