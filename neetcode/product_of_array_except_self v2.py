@@ -44,24 +44,11 @@ is [3,1,1,5].
 from typing import List
 
 class Solution:
-    def quotient(self, dividend: int, divisor: int) -> int:
-        
-        # The quotient is found by counting iterations of loop below
-        quotient = 0
-        # Sum is used to control how many times we must add divisor
-        sum = 0
-        while sum < dividend:   # Until sum reaches dividend
-            sum += divisor      # Add divisor to sum
-            quotient += 1       # and increment quotient
-
-        return quotient
-
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        nums_length = len(nums)
+        
 
         return []
     
 test_nums1 = [2,3,4]
-i = test_nums1[0]
 sol = Solution()
 sol.productExceptSelf(test_nums1)
