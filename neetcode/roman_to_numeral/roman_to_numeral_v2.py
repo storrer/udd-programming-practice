@@ -32,3 +32,8 @@ for input in inputs:
         print("Pass")
     else:
         print("Fail")
+
+# XIX
+# X 10
+# I (I<X) 1
+# X (X>I) X 10 - 1 - 1

@@ -42,6 +42,7 @@ is [3,1,1,5].
 """
 
 from typing import List
+from collections import Counter
 
 class Solution:
     def quotient(self, dividend: int, divisor: int) -> int:
@@ -57,20 +58,27 @@ class Solution:
         return quotient
 
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        # Find the product of the elements in the list
-        total = 1
-        for integer in nums:
-            print(f"Current operation: {integer} * {total}")
-            total *= integer
-            print(f"Result: {total}\n")
+        counter = Counter(nums)
+        print(counter[0])
+
+        if counter[0] >= 2:
+            return [0]*len(nums)
+                     
+
         
 
         return []
 
 test_234 = ([2,3,4], [12,8,6])
+nums = [1,0,0,4]
+sol = Solution()
+print(sol.productExceptSelf(nums))
 
+# [1,2,3,4]
+# Pass 1: multiply left to right and store product
+# []
 
-
+"""
 def runTests(test_inputs: List[tuple]):
 	sol = Solution()
 
@@ -87,4 +95,4 @@ def runTests(test_inputs: List[tuple]):
 	if test_passed:
 		print("All test passed.")
 
-runTests([])
+runTests([])"""

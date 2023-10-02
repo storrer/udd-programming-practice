@@ -46,7 +46,12 @@ from typing import List
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         
-
+                # Find the product of the elements in the list left to right
+        total = 1
+        for integer in nums:
+            print(f"Current operation: {integer} * {total}")
+            total *= integer
+            print(f"Result: {total}\n")
         return []
     
 test_nums1 = [2,3,4]
