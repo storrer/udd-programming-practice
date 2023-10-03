@@ -3,3 +3,4 @@ notebook.ipynb
 uninstall.txt
 scratch.py
 venv
+*__pycache__
