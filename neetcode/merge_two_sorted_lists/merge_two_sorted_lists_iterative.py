@@ -35,21 +35,8 @@ class ListNode:
         # Default value is 0
         self.val = val
         self.next = next # Starts with none, the end of the list
-class Solution:
-    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        print(*list1)
-        return
 
-node1_3 = ListNode(4)
-node1_2 = ListNode(2, node1_3)
-node1_1 = ListNode(1, node1_2)
-
-node2_3 = ListNode(4)
-node2_2 = ListNode(3, node2_3)
-node2_1 = ListNode(1, node2_2)
-
-
-def return_list_string(node: Optional[ListNode]):
+def llstring(node: Optional[ListNode]):
     if node is None:
         return "[]"
     node_exists = node # Resolve this is 'unwrapped'
@@ -64,12 +51,50 @@ def return_list_string(node: Optional[ListNode]):
     return result
 
 
-print(return_list_string(None))
-print(return_list_string(node1_1))
-print(return_list_string(node2_1))
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        """
+        Merges linked lists that are already sorted, maintaining an ascending order.
+        """
+        result_head = ListNode()
+        result_tail = result_head
+
+        while list1 and list2:
+            if list1.val < list2.val:
+                result_tail.next = list1
+                list1 = list1.next
+            else: 
+                result_tail.next = list2
+                list2 = list2.next
+
+            result_tail = result_tail.next
+        
+        if list1:
+            result_tail.next = list1
+        if list2:
+            result_tail.next = list2
+        
+        return result_head.next
+
+node1_3 = ListNode(4)
+node1_2 = ListNode(2, node1_3)
+node1_1 = ListNode(1, node1_2)
+
+node2_3 = ListNode(4)
+node2_2 = ListNode(3, node2_3)
+node2_1 = ListNode(1, node2_2)
+
+
+
+
+
+#print(llstring(None))
+#print(llstring(node1_1))
+#print(llstring(node2_1))
 
 sol = Solution()
-#sol.mergeTwoLists()
+merged_lls = sol.mergeTwoLists(node1_1, node2_1)
+print(llstring(merged_lls))
 """
 1
 [1,2,4] 
