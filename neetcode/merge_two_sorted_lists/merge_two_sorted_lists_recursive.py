@@ -50,6 +50,17 @@ def llstring(node: Optional[ListNode]):
     result += "]"
     return result
 
+# 1. Base cases
+# If one is None or empty, append the non-empty list entirely to the result
+# result_tail.next list1
+# 2. Recur with simpler case each call
+# smaller, shorter list, more sorted result
+"""
+list1 = [1]
+list2 = [2,3,4]
+
+"""
+
 
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
@@ -57,29 +68,28 @@ class Solution:
         Merges linked lists that are already sorted, maintaining an ascending order.
         """
         result_head = ListNode()
-        result_tail = result_head
-        while list1 and list2:
-            if list1.val < list2.val:
-                result_tail.next = list1
-                list1 = list1.next
-            else: 
-                result_tail.next = list2
-                list2 = list2.next
+        if list1 == None:
+            return list2
+        if list2 == None:
+            return list1
+        if list1.val < list2.val:
+            result_head = list1
+            result_head.next = self.mergeTwoLists(list1.next, list2)
+        else:
+            result_head = list2
+            result_head.next = self.mergeTwoLists(list1, list2.next)
+        return result_head
+            
 
-            result_tail = result_tail.next
-        if list1:
-            result_tail.next = list1
-        if list2:
-            result_tail.next = list2
-        return result_head.next
 
 node1_3 = ListNode(4)
 node1_2 = ListNode(2, node1_3)
 node1_1 = ListNode(1, node1_2)
+#node1_1 = ListNode(1)
 
 node2_3 = ListNode(4)
 node2_2 = ListNode(3, node2_3)
-node2_1 = ListNode(1, node2_2)
+node2_1 = ListNode(2, node2_2)
 
 
 
