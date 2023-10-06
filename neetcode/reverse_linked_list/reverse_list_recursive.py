@@ -20,17 +20,13 @@ def llstring(node: Optional[ListNode]):
 
 class Solution:
     def reverse_list_rec(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        if head == None or head.next == None:
-            return head
-        
-        temp_next = head.next
-        head.next = None
-        # [1/1] [1/2] [1/4]
-        result = self.reverse_list_rec(head.next) # If head.next.next = None -> rev(head.next) returns itself and we set it as the new first link
-        assert isinstance(head.next, ListNode)
+        if head == None or head.next == None: # [1/2]= false, [2/4] =false, [3/None] = true
+            return head # [3/None]
+        # Recursive Case
+        result_head = self.reverse_list_rec(head.next) # If head.next.next = None -> rev(head.next) returns itself and we set it as the new first link
         head.next.next = head # reverse the list direction here
         head.next = None
-        return result
+        return result_head
 
 
 node1_3 = ListNode(4)
