@@ -34,7 +34,7 @@ class Solution:
             list_of_links.append(ListNode(head.val)) # [1/None,2/None,
             #result_tail = new_head
             head = head.next # 1/2 -> 2/3 -> 3/None
-        for i in range(1,len(list_of_links)):
+        for i in range(1,len(list_of_links)): # 
             list_of_links[i].next = result_tail
             result_tail = list_of_links[i]
         return result_tail
@@ -44,7 +44,7 @@ class Solution:
         list_of_links = []
         if head == None or head.next == None:
             return head
-        result_tail = ListNode(head.val) 
+        result_tail = ListNode(head.val)
         
         assert isinstance(head.next,ListNode)
 
