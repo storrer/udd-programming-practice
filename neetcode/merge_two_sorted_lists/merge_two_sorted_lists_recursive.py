@@ -91,10 +91,6 @@ node2_3 = ListNode(4)
 node2_2 = ListNode(3, node2_3)
 node2_1 = ListNode(2, node2_2)
 
-
-
-
-
 #print(llstring(None))
 #print(llstring(node1_1))
 #print(llstring(node2_1))
