@@ -86,7 +86,3 @@ print(sol.isValidBST(root4))
 
 
 
-
-"""
-I can traverse a (supposedly) binary tree using pre-order traversal and add the numbers I encounter to a stack (or list). Then I traverse the list from list[start] to list[end] and if any number is less than the number before it, the tree they came from cannot be binary? I'm operating from the analogous task of printing names in alphabetical order from a binary tree in which they are stored.
-"""
