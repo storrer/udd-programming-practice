@@ -68,7 +68,7 @@ class Solution:
                 return False
             return traverse(link.next)
         
-        assert isinstance(head.next,ListNode)
+        assert isinstance(head.next, ListNode)
 
         temp = head
         while temp.next is not None:

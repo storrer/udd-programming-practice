@@ -42,7 +42,7 @@ class Solution:
         if root is None:
             return True
         
-        if root.val > maximum:  
+        if root.val >= maximum:  
             return False
         
         if root.val < minimum:
@@ -54,7 +54,7 @@ class Solution:
         if root is None:
             return True
         
-        if root.val < minimum:
+        if root.val <= minimum:
             return False
         
         if root.val > maximum:
