@@ -1,18 +1,13 @@
 from typing import List
 
-
 class Solution:
     def findCircleNum(self, isConnected: List[List[int]]) -> int:
         # Keep track of visited 
         visited = []
-        # To visit
+        # Create a stack of cities to visit
         to_visit = [0]
-        # Explore the edges of the connections
         # read left to right along the city's row
         # add to visited,
-        visited = [0]
-        to_visit = [1]
-        visited = [0,1]
         to_visit = [] # no more to visit
         # Add city to visit to stack of to_visit
         to_visit = [0]
@@ -25,10 +20,6 @@ class Solution:
             # if there are more cities in isConnected, add the next un-visited city to to_visit
             pass
 
-
-        
-
-
         return count
     
     def visit_city(self, city:int, connections: List[int], visited):
@@ -37,16 +28,13 @@ class Solution:
 
         return to_visit
 
-
-
-matrix = [
+matrix0 = [
     [1,1,0],
     [1,1,0],
     [0,0,1]
 ]
-matrix[1][1]
 
-matrix = [
+matrix1 = [
     [1,1,0],
     [1,1,0],
     [0,0,1]
