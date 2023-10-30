@@ -16,8 +16,8 @@ class Solution:
     # Ruby, Rust, Lisp
     def countConsistentFunctional(self, allowed, words):
         # no Mutables
-        # Produce iterator/generator
-        consistent = filter(lambda word: all(char in allowed for char in word), words)
+        check = lambda word: all(char in allowed for char in word)
+        consistent = filter(check, words)
 
         return len(list(consistent))
 
