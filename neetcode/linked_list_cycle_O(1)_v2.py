@@ -41,7 +41,6 @@ pos is -1 or a valid index in the linked-list.
 Follow up: Can you solve it using O(1) (i.e. constant) memory?
 """
 
-from typing import Optional
 
 # Definition for singly-linked list.
 class ListNode:
@@ -52,17 +51,17 @@ class ListNode:
 inp = [1,2] # Expected False
 
 class Solution:
-    def hasCycle(self, head: Optional[ListNode]):        
+    def hasCycle(self, head):        
         normal = head
         fast = head
-
-        while fast.next is None:
-            # something with the pointers
-            fast = normal.next.next
+        # tortoise
+        while fast.next is not None and fast.next is not None:
             if normal is fast:
                 return True
-
-
+            normal = normal.next
+            fast = fast.next.next
+        # Create a visited, memory allowing . . .
+        return False
 
 node1_3 = ListNode(4)
 node1_2 = ListNode(2, node1_3)
@@ -79,4 +78,3 @@ node2_1 = ListNode(1, node2_2)
 node2_3.next = node2_1
 
 print(sol.hasCycle(node2_1)) # True
-
