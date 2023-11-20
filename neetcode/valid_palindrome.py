@@ -10,18 +10,28 @@ Output: true
 Explanation: "amanaplanacanalpanama" is a palindrome.
 """
 
+class Solution:
+	def isPalindrome(self, s: str) -> bool:
+		s = "".join(filter(str.isalnum, s.lower()))
+		#print(s)
 
-def is_palindrome(s: str) -> bool:
-	# preprocess string here (don't be afraid to 'refactor')
-	return s.upper().replace(" ", "").replace(".","")[::-1] == s.upper().replace(" ","").replace(".","")
+		return s == s[::-1]
 
+sol = Solution()
+print(sol.isPalindrome("abba.|")) # true
+s1 = "A man, a plan, a canal: Panama"
+print(sol.isPalindrome(s1)) # true
+
+
+#sol = Solution()
 s_test = "abba"
-s_test_two = "abb a"
-s_test_three = "abb. a"
 
-print(is_palindrome(s_test))
-print(is_palindrome(s_test_two))
-print(is_palindrome(s_test_three))
+s_test_two = "abc a"
+#s_test_three = "abb. a"
+
+print(sol.isPalindrome(s_test)) # true
+print(sol.isPalindrome(s_test_two)) # False
+#print(sol.isPalindrome()(s_test_three))
 
 # Run more often!
 # Test new code and edge cases.

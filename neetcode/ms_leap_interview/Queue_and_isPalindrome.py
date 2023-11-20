@@ -34,6 +34,8 @@ def isPalindrome(num: int) -> bool:
     num_string = str(abs(num)) # abs returns absolute value of num, then str() casts it as a string
     return num_string == num_string[::-1] # Compare string representation of input with it's reverse
 
+# % 10 chip lowest x 
+
 print(isPalindrome(11)) # True
 print(isPalindrome(121)) # True
 print(isPalindrome(12)) # False
